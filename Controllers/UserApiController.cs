@@ -57,7 +57,7 @@ namespace Asp.net_Api_Practice.Controllers
         public JsonResult UpdateUser(UserInfo newUser ,int id)
         {
             var userdata = context.UserInfos.FirstOrDefault(option => option.UserId == id);
-            userdata.UserId = newUser.UserId;
+            id = newUser.UserId;
             userdata.UserName = newUser.UserName;
             userdata.Email = newUser.Email;
             userdata.Phone = newUser.Phone;
